@@ -4,227 +4,295 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Wawoli Justin Koné — Référent Technique IT</title>
+<meta name="description" content="Portfolio de Wawoli Justin Koné, Référent Technique Support Utilisateurs — Systèmes, Réseaux, Cloud Azure.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F5F6F8;
+    --bg:#F2F4F1;
     --panel:#FFFFFF;
-    --ink:#1B2430;
-    --ink-soft:#4B5563;
-    --rule:#DCE1E8;
-    --blue:#2452B0;
-    --teal:#3E7C74;
+    --ink:#12181C;
+    --ink-soft:#4B565A;
+    --line:#D7DBD6;
+    --amber:#C98A2C;
+    --teal:#3E6259;
+    --maxw:880px;
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
+    margin:0;
     background:var(--bg);
     color:var(--ink);
-    font-family:'IBM Plex Sans',system-ui,sans-serif;
+    font-family:'IBM Plex Sans',-apple-system,Segoe UI,sans-serif;
     line-height:1.55;
+    -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px;}
-  header.hero{margin-bottom:56px;}
-  .role{
-    color:var(--blue);
-    font-size:14px;
-    letter-spacing:0.02em;
-    margin-bottom:10px;
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;color:var(--ink);}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:var(--teal);}
+
+  /* HEADER / HERO */
+  header{padding:64px 0 40px;border-bottom:1px solid var(--line);}
+  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:end;}
+  .hero h1{font-size:clamp(30px,5vw,44px);line-height:1.08;letter-spacing:-0.01em;}
+  .role{margin-top:10px;font-size:17px;color:var(--ink-soft);}
+  .loc{margin-top:6px;font-size:13px;color:var(--ink-soft);}
+  .loc .dot{color:var(--amber);}
+
+  .panel{
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:18px 20px;
   }
-  h1{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:clamp(32px,5vw,44px);
-    line-height:1.1;
-    max-width:14ch;
+  .panel .row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px;}
+  .panel .row:last-child{border-bottom:none;}
+  .panel .row .k{color:var(--ink-soft);}
+  .panel .row .v{font-family:'IBM Plex Mono',monospace;font-weight:500;}
+  .led{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:7px;box-shadow:0 0 0 3px rgba(201,138,44,.15);}
+
+  nav{padding:14px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5;}
+  nav .wrap{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-family:'IBM Plex Mono',monospace;}
+  nav a{color:var(--ink-soft);text-decoration:none;}
+  nav a:hover{color:var(--ink);}
+
+  section{padding:52px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal);margin-bottom:14px;}
+  section h2{font-size:24px;margin-bottom:22px;}
+  .lede{max-width:60ch;color:var(--ink-soft);}
+
+  /* TIMELINE */
+  .timeline{position:relative;margin-top:8px;padding-left:26px;}
+  .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line);}
+  .tl-item{position:relative;padding-bottom:34px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{content:"";position:absolute;left:-26px;top:5px;width:9px;height:9px;background:var(--bg);border:2px solid var(--teal);border-radius:50%;}
+  .tl-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--amber);margin-bottom:4px;}
+  .tl-title{font-weight:600;font-size:16px;}
+  .tl-org{color:var(--ink-soft);font-size:14px;margin-bottom:8px;}
+  .tl-item ul{margin:6px 0 0;padding-left:18px;color:var(--ink-soft);font-size:14.5px;}
+  .tl-item li{margin-bottom:4px;}
+
+  /* SKILLS */
+  .skill-groups{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;}
+  .skill-group h3{font-size:13px;font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--teal);text-transform:none;margin-bottom:10px;}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;}
+  .tag{font-family:'IBM Plex Mono',monospace;font-size:12.5px;padding:5px 10px;background:var(--panel);border:1px solid var(--line);}
+
+  /* CERTS */
+  .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .cert{background:var(--panel);border:1px solid var(--line);padding:16px;}
+  .cert .name{font-weight:600;font-size:14.5px;}
+  .cert .status{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+  .cert.inprep{border-left:3px solid var(--amber);}
+  .cert.done{border-left:3px solid var(--teal);}
+
+  /* PROJECTS */
+  .projects{display:flex;flex-direction:column;gap:20px;}
+  .project{display:grid;grid-template-columns:110px 1fr;gap:18px;}
+  .project .tag-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);padding-top:2px;}
+  .project h3{font-size:16px;margin-bottom:6px;}
+  .project p{margin:0;color:var(--ink-soft);font-size:14.5px;}
+
+  /* CONTACT */
+  footer{padding:52px 0 64px;}
+  .contact-grid{display:flex;flex-wrap:wrap;gap:28px;margin-top:18px;}
+  .contact-item .k{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);margin-bottom:4px;}
+  .contact-item .v{font-size:15px;}
+  .fine{margin-top:40px;font-size:12px;color:var(--ink-soft);}
+
+  @media (max-width:720px){
+    .hero{grid-template-columns:1fr;}
+    .skill-groups{grid-template-columns:1fr;}
+    .certs{grid-template-columns:1fr 1fr;}
+    .project{grid-template-columns:1fr;}
   }
-  .pitch{
-    margin-top:20px;
-    max-width:62ch;
-    color:var(--ink-soft);
-    font-size:17px;
-  }
-  .contact{
-    margin-top:24px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px 18px;
-    font-size:14px;
-  }
-  .contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule);}
-  .contact a:hover{border-color:var(--blue);color:var(--blue);}
-  section{margin-top:52px;}
-  h2{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:22px;
-    margin-bottom:20px;
-    padding-bottom:10px;
-    border-bottom:1px solid var(--rule);
-  }
-  .skills{display:grid;grid-template-columns:1fr 1fr;gap:20px 32px;}
-  @media(max-width:560px){.skills{grid-template-columns:1fr;}}
-  .skill dt{font-weight:600;font-size:14.5px;margin-bottom:4px;}
-  .skill dd{color:var(--ink-soft);font-size:14.5px;}
-  .job{
-    position:relative;
-    padding-left:22px;
-    border-left:2px solid var(--rule);
-    padding-bottom:32px;
-  }
-  .job:last-child{padding-bottom:0;}
-  .job::before{
-    content:"";
-    position:absolute;left:-7px;top:4px;
-    width:12px;height:12px;border-radius:50%;
-    background:var(--panel);border:2px solid var(--blue);
-  }
-  .job time{font-size:13px;color:var(--ink-soft);}
-  .job h3{font-size:17px;font-weight:600;margin-top:2px;}
-  .job .org{color:var(--teal);font-size:14.5px;margin-bottom:8px;}
-  .job ul{padding-left:18px;color:var(--ink-soft);font-size:14.5px;}
-  .job li{margin-bottom:4px;}
-  .cert-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
-  @media(max-width:560px){.cert-grid{grid-template-columns:1fr;}}
-  .cert-grid h4{font-size:14px;color:var(--ink-soft);font-weight:500;margin-bottom:8px;}
-  .cert-grid ul{list-style:none;font-size:14.5px;}
-  .cert-grid li{margin-bottom:6px;}
-  .tag{
-    display:inline-block;font-size:12.5px;color:var(--blue);
-    background:rgba(36,82,176,0.08);padding:2px 8px;border-radius:4px;
-    margin-right:6px;margin-bottom:6px;
-  }
-  .projects{display:grid;gap:16px;}
-  .project{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:18px 20px;}
-  .project h3{font-size:15.5px;margin-bottom:4px;}
-  .project p{font-size:14.5px;color:var(--ink-soft);}
-  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink-soft);}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <header class="hero">
-    <div class="role">Référent Technique IT — Support Utilisateurs · Systèmes · Cloud Azure</div>
-    <h1>Wawoli Justin Koné</h1>
-    <p class="pitch">Plus de 7 ans à faire tourner l'infrastructure IT et le support de plus de 1 000 utilisateurs chez SOLIBRA CI (Groupe Castel) : Active Directory, Microsoft 365, virtualisation, sécurité, et une équipe de 9 personnes à encadrer au quotidien.</p>
-    <div class="contact">
-      <a href="mailto:kwawolijustin@yahoo.fr">kwawolijustin@yahoo.fr</a>
-      <a href="tel:+22507475095 52">+225 07 47 50 95 52</a>
-      <a href="https://www.linkedin.com/in/wjustin-kone" target="_blank" rel="noopener">LinkedIn</a>
+<header>
+  <div class="wrap hero">
+    <div>
+      <h1>Wawoli Justin Koné</h1>
+      <div class="role">Référent Technique IT — Support Utilisateurs · Systèmes · Cloud Azure</div>
+      <div class="loc">Abidjan, Côte d'Ivoire <span class="dot">·</span> SOLIBRA CI (Groupe Castel)</div>
     </div>
-  </header>
+    <div class="panel">
+      <div class="row"><span class="k"><span class="led"></span>Expérience</span><span class="v">9+ ans</span></div>
+      <div class="row"><span class="k">Utilisateurs supportés</span><span class="v">1000+</span></div>
+      <div class="row"><span class="k">Équipe encadrée</span><span class="v">9 techniciens</span></div>
+      <div class="row"><span class="k">Certifications</span><span class="v">ITIL v4 · AZ-900 · C|SCU</span></div>
+    </div>
+  </div>
+</header>
 
-  <section>
+<nav>
+  <div class="wrap">
+    <a href="#apropos">à propos</a>
+    <a href="#experience">expérience</a>
+    <a href="#competences">compétences</a>
+    <a href="#certifications">certifications</a>
+    <a href="#projets">projets</a>
+    <a href="#contact">contact</a>
+  </div>
+</nav>
+
+<section id="apropos">
+  <div class="wrap">
+    <div class="eyebrow">à propos</div>
+    <p class="lede">Référent technique en support IT avec plus de 9 ans d'expérience chez SOLIBRA CI, de la gestion des incidents à l'administration de systèmes complexes. Solide expertise en infrastructures (Active Directory, Windows Server, VMware), en cybersécurité et en accompagnement d'équipes techniques. En transition vers des responsabilités élargies en administration Cloud Microsoft 365 / Azure et en gestion de projet.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="eyebrow">parcours</div>
+    <h2>Expérience professionnelle</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">juillet 2021 — aujourd'hui</div>
+        <div class="tl-title">Référent Technique Support Utilisateurs</div>
+        <div class="tl-org">SOLIBRA, Abidjan · CDI</div>
+        <ul>
+          <li>Supervision des infrastructures IT (Active Directory, téléphonie 3CX, impression MyQ, sauvegarde EBS)</li>
+          <li>Gestion des endpoints avec Microsoft Intune et déploiement de GPO</li>
+          <li>Support utilisateurs et gestion des incidents via GLPI et ServiceNow</li>
+          <li>Formation des utilisateurs sur Microsoft 365 et accompagnement des techniciens</li>
+          <li>Collaboration avec les équipes locales et internationales pour la continuité de service</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">août 2018 — juin 2021</div>
+        <div class="tl-title">Technicien Support Utilisateurs</div>
+        <div class="tl-org">SOLIBRA, Abidjan · CDI</div>
+        <ul>
+          <li>Assistance sur la suite Microsoft 365 et les outils IT</li>
+          <li>Supervision de la sécurité (Kaspersky) et des systèmes d'impression (MyQ)</li>
+          <li>Gestion des sauvegardes utilisateurs (EBS) et rédaction de documentation</li>
+        </ul>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">juillet 2017 — juillet 2018</div>
+        <div class="tl-title">Stagiaire Exploitation Informatique</div>
+        <div class="tl-org">SOLIBRA, Abidjan</div>
+        <ul>
+          <li>Administration de systèmes et supervision d'infrastructures virtualisées</li>
+          <li>Gestion des comptes utilisateurs et support à l'intégration technique</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="competences">
+  <div class="wrap">
+    <div class="eyebrow">expertise</div>
     <h2>Compétences clés</h2>
-    <dl class="skills">
-      <div class="skill"><dt>Administration IT</dt><dd>Active Directory, Entra ID, Windows Server, VMware, Hyper-V, Cisco (switches &amp; routeurs)</dd></div>
-      <div class="skill"><dt>Gestion des incidents</dt><dd>GLPI, ServiceNow — suivi et résolution</dd></div>
-      <div class="skill"><dt>Cybersécurité</dt><dd>Crowdstrike, Kaspersky, ITIL v4, C|SCU, gestion des risques</dd></div>
-      <div class="skill"><dt>Gestion des postes</dt><dd>Microsoft Intune, GPO, PowerShell</dd></div>
-      <div class="skill"><dt>Supervision</dt><dd>PRTG, MyQ, 3CX, Evotech, Tanium</dd></div>
-      <div class="skill"><dt>Collaboration &amp; Cloud</dt><dd>Microsoft 365, Teams, SharePoint</dd></div>
-    </dl>
-  </section>
-
-  <section>
-    <h2>Expérience</h2>
-
-    <div class="job">
-      <time>Juillet 2021 — aujourd'hui</time>
-      <h3>Référent Technique Support Utilisateurs</h3>
-      <div class="org">SOLIBRA · CDI</div>
-      <ul>
-        <li>Supervision des infrastructures IT : Active Directory, téléphonie 3CX, impression MyQ, sauvegarde EBS</li>
-        <li>Gestion des endpoints avec Microsoft Intune</li>
-        <li>Encadrement des techniciens et rédaction des procédures techniques</li>
-        <li>Coordination avec les équipes locales et internationales pour la continuité de service</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <time>Août 2018 — Juin 2021</time>
-      <h3>Technicien Support Utilisateurs</h3>
-      <div class="org">SOLIBRA · CDI</div>
-      <ul>
-        <li>Support Microsoft 365 et supervision de la sécurité (Kaspersky)</li>
-        <li>Gestion des systèmes d'impression et des sauvegardes utilisateurs</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <time>Juillet 2017 — Juillet 2018</time>
-      <h3>Stagiaire Exploitation Informatique</h3>
-      <div class="org">SOLIBRA</div>
-      <ul>
-        <li>Administration des systèmes et supervision des infrastructures virtualisées</li>
-      </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>Réalisations</h2>
-    <div class="projects">
-      <div class="project">
-        <h3>Migration vers SharePoint Online</h3>
-        <p>Suivi du projet de migration des partages réseau vers SharePoint.</p>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Administration IT</h3>
+        <div class="tags">
+          <span class="tag">Active Directory</span><span class="tag">Entra ID</span>
+          <span class="tag">Windows Server</span><span class="tag">VMware / Hyper-V</span>
+          <span class="tag">PowerShell</span><span class="tag">Cisco (switches/routeurs)</span>
+        </div>
       </div>
-      <div class="project">
-        <h3>Automatisation par stratégies de groupe</h3>
-        <p>Mise en place de GPO pour optimiser la gestion des utilisateurs.</p>
+      <div class="skill-group">
+        <h3>Gestion des incidents</h3>
+        <div class="tags">
+          <span class="tag">GLPI</span><span class="tag">ServiceNow</span>
+          <span class="tag">ITIL v4</span>
+        </div>
       </div>
-      <div class="project">
-        <h3>+30% de productivité des techniciens</h3>
-        <p>Accompagnement de l'équipe support ayant conduit à une hausse mesurée de l'efficacité.</p>
+      <div class="skill-group">
+        <h3>Cybersécurité</h3>
+        <div class="tags">
+          <span class="tag">Crowdstrike</span><span class="tag">Kaspersky</span>
+          <span class="tag">C|SCU</span><span class="tag">Gestion des risques</span>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Certifications &amp; formation</h2>
-    <div class="cert-grid">
-      <div>
-        <h4>Obtenues</h4>
-        <ul>
-          <li>Microsoft Azure Fundamentals (AZ-900)</li>
-          <li>ITIL v4</li>
-          <li>Certified Secure Computer User (C|SCU v2)</li>
-        </ul>
+      <div class="skill-group">
+        <h3>Postes &amp; supervision</h3>
+        <div class="tags">
+          <span class="tag">Microsoft Intune</span><span class="tag">GPO</span>
+          <span class="tag">PRTG</span><span class="tag">3CX</span><span class="tag">MyQ</span><span class="tag">Tanium</span>
+        </div>
       </div>
-      <div>
-        <h4>En préparation</h4>
-        <ul>
-          <li>AZ-104 — Azure Administrator</li>
-          <li>MS-102 — Microsoft 365 Administrator</li>
-          <li>PMP</li>
-        </ul>
+      <div class="skill-group">
+        <h3>Collaboration &amp; Cloud</h3>
+        <div class="tags">
+          <span class="tag">Microsoft 365</span><span class="tag">Teams</span>
+          <span class="tag">SharePoint</span><span class="tag">Azure</span>
+        </div>
       </div>
-      <div>
-        <h4>Formation académique</h4>
-        <ul>
-          <li>BTS Réseaux Informatiques et Télécoms — ISTCI, Abidjan</li>
-          <li>Baccalauréat D</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Formations complémentaires</h4>
-        <div>
-          <span class="tag">Google IT Support</span>
-          <span class="tag">Kubernetes</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Windows Server 2019 / PowerShell 7</span>
-          <span class="tag">Administration M365</span>
-          <span class="tag">Linux</span>
+      <div class="skill-group">
+        <h3>Langues</h3>
+        <div class="tags">
+          <span class="tag">Français — courant</span><span class="tag">Anglais — A2 (en progression)</span>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    Français (courant) · Anglais (A2, en progression) — Cloud computing, cybersécurité et infographie
-  </footer>
+<section id="certifications">
+  <div class="wrap">
+    <div class="eyebrow">validation</div>
+    <h2>Certifications</h2>
+    <div class="certs">
+      <div class="cert done"><div class="name">Microsoft Azure Fundamentals</div><div class="status">AZ-900 · obtenue</div></div>
+      <div class="cert done"><div class="name">Certified Secure Computer User</div><div class="status">C|SCU v2 · obtenue</div></div>
+      <div class="cert done"><div class="name">ITIL v4 Foundation</div><div class="status">obtenue</div></div>
+      <div class="cert inprep"><div class="name">Azure Administrator</div><div class="status">AZ-104 · en préparation</div></div>
+      <div class="cert inprep"><div class="name">Microsoft 365 Administrator</div><div class="status">MS-102 · en préparation</div></div>
+      <div class="cert inprep"><div class="name">Project Management Professional</div><div class="status">PMP · en préparation</div></div>
+    </div>
+  </div>
+</section>
 
-</div>
+<section id="projets">
+  <div class="wrap">
+    <div class="eyebrow">réalisations</div>
+    <h2>Projets &amp; réalisations clés</h2>
+    <div class="projects">
+      <div class="project">
+        <div class="tag-num mono">Cloud</div>
+        <div><h3>Migration vers SharePoint</h3><p>Suivi du projet de migration des partages réseau vers SharePoint, en coordination avec les équipes locales et internationales.</p></div>
+      </div>
+      <div class="project">
+        <div class="tag-num mono">Endpoints</div>
+        <div><h3>Gestion des endpoints avec Intune</h3><p>Déploiement et administration des postes utilisateurs via Microsoft Intune pour une gestion centralisée et sécurisée.</p></div>
+      </div>
+      <div class="project">
+        <div class="tag-num mono">Process</div>
+        <div><h3>Amélioration de l'efficacité IT</h3><p>Accompagnement et formation des techniciens, contribuant à une augmentation de la productivité de l'équipe de 30%.</p></div>
+      </div>
+      <div class="project">
+        <div class="tag-num mono">Automatisation</div>
+        <div><h3>Stratégies de groupe (GPO)</h3><p>Mise en place de GPO pour optimiser et standardiser la gestion des utilisateurs et des postes.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">contact</div>
+    <h2>Discutons</h2>
+    <p class="lede">Ouvert aux opportunités en administration Cloud Microsoft 365 / Azure et en gestion de projet IT.</p>
+    <div class="contact-grid">
+      <div class="contact-item"><div class="k">EMAIL</div><div class="v"><a href="mailto:kwawolijustin@yahoo.fr">kwawolijustin@yahoo.fr</a></div></div>
+      <div class="contact-item"><div class="k">TÉLÉPHONE</div><div class="v">+225 07 47 50 95 52</div></div>
+      <div class="contact-item"><div class="k">LINKEDIN</div><div class="v"><a href="https://www.linkedin.com/in/wjustin-kone" target="_blank" rel="noopener">wjustin-kone</a></div></div>
+    </div>
+    <div class="fine">© 2026 Wawoli Justin Koné</div>
+  </div>
+</footer>
+
 </body>
 </html>

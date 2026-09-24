@@ -10,20 +10,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F2F4F1;
+    --bg:#F4F6FB;
     --panel:#FFFFFF;
-    --ink:#12181C;
-    --ink-soft:#4B565A;
-    --line:#D7DBD6;
-    --amber:#C98A2C;
-    --teal:#3E6259;
+    --ink:#10151F;
+    --ink-soft:#4B5566;
+    --line:#DCE1EC;
+    --blue:#2F5AE0;
+    --violet:#7A54F0;
+    --teal:#0F9B8E;
+    --amber:#E0982A;
+    --coral:#EF6753;
+    --crimson:#D6395B;
     --maxw:880px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--bg);
+    background:
+      radial-gradient(circle at 12% 6%, rgba(122,84,240,.14), transparent 32%),
+      radial-gradient(circle at 92% 2%, rgba(47,90,224,.12), transparent 30%),
+      radial-gradient(circle at 100% 55%, rgba(15,155,142,.10), transparent 32%),
+      radial-gradient(circle at 4% 70%, rgba(224,152,42,.10), transparent 30%),
+      radial-gradient(circle at 90% 100%, rgba(239,103,83,.10), transparent 32%),
+      var(--bg);
     color:var(--ink);
     font-family:'IBM Plex Sans',-apple-system,Segoe UI,sans-serif;
     line-height:1.55;
@@ -32,35 +42,42 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
   h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0;color:var(--ink);}
   .mono{font-family:'IBM Plex Mono',monospace;}
-  a{color:var(--teal);}
+  a{color:var(--blue);}
 
   /* HEADER / HERO */
-  header{padding:64px 0 40px;border-bottom:1px solid var(--line);}
-  .hero{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:end;}
-  .hero h1{font-size:clamp(30px,5vw,44px);line-height:1.08;letter-spacing:-0.01em;}
-  .role{margin-top:10px;font-size:17px;color:var(--ink-soft);}
-  .loc{margin-top:6px;font-size:13px;color:var(--ink-soft);}
+  header{padding:0 0 0;background:linear-gradient(135deg,var(--blue) 0%,var(--violet) 100%);color:#fff;}
+  .hero{max-width:var(--maxw);margin:0 auto;padding:68px 28px 40px;display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:end;}
+  .hero h1{font-size:clamp(30px,5vw,44px);line-height:1.08;letter-spacing:-0.01em;color:#fff;}
+  .role{margin-top:10px;font-size:17px;color:rgba(255,255,255,.88);}
+  .loc{margin-top:6px;font-size:13px;color:rgba(255,255,255,.7);}
   .loc .dot{color:var(--amber);}
 
   .panel{
-    background:var(--panel);
-    border:1px solid var(--line);
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(2px);
+    border:1px solid rgba(255,255,255,.25);
     padding:18px 20px;
   }
-  .panel .row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px;}
+  .panel .row{display:flex;justify-content:space-between;align-items:baseline;padding:7px 0;border-bottom:1px dashed rgba(255,255,255,.25);font-size:13px;}
   .panel .row:last-child{border-bottom:none;}
-  .panel .row .k{color:var(--ink-soft);}
-  .panel .row .v{font-family:'IBM Plex Mono',monospace;font-weight:500;}
-  .led{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:7px;box-shadow:0 0 0 3px rgba(201,138,44,.15);}
+  .panel .row .k{color:rgba(255,255,255,.75);}
+  .panel .row .v{font-family:'IBM Plex Mono',monospace;font-weight:500;color:#fff;}
+  .led{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--amber);margin-right:7px;box-shadow:0 0 0 3px rgba(224,152,42,.35);}
 
-  nav{padding:14px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5;}
+  nav{padding:14px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(244,246,251,.82);backdrop-filter:blur(6px);z-index:5;}
   nav .wrap{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;font-family:'IBM Plex Mono',monospace;}
   nav a{color:var(--ink-soft);text-decoration:none;}
-  nav a:hover{color:var(--ink);}
+  nav a:hover{color:var(--blue);}
 
   section{padding:52px 0;border-bottom:1px solid var(--line);}
   section:last-of-type{border-bottom:none;}
-  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--teal);margin-bottom:14px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;margin-bottom:14px;font-weight:500;}
+  #apropos .eyebrow{color:var(--blue);}
+  #experience .eyebrow{color:var(--violet);}
+  #competences .eyebrow{color:var(--teal);}
+  #certifications .eyebrow{color:var(--amber);}
+  #projets .eyebrow{color:var(--coral);}
+  #contact .eyebrow{color:var(--crimson);}
   section h2{font-size:24px;margin-bottom:22px;}
   .lede{max-width:60ch;color:var(--ink-soft);}
 
@@ -69,7 +86,10 @@
   .timeline::before{content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;background:var(--line);}
   .tl-item{position:relative;padding-bottom:34px;}
   .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{content:"";position:absolute;left:-26px;top:5px;width:9px;height:9px;background:var(--bg);border:2px solid var(--teal);border-radius:50%;}
+  .tl-item::before{content:"";position:absolute;left:-26px;top:5px;width:9px;height:9px;background:var(--dot,var(--violet));border-radius:50%;}
+  .tl-item.c1::before{--dot:var(--violet);}
+  .tl-item.c2::before{--dot:var(--blue);}
+  .tl-item.c3::before{--dot:var(--teal);}
   .tl-date{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--amber);margin-bottom:4px;}
   .tl-title{font-weight:600;font-size:16px;}
   .tl-org{color:var(--ink-soft);font-size:14px;margin-bottom:8px;}
@@ -78,31 +98,51 @@
 
   /* SKILLS */
   .skill-groups{display:grid;grid-template-columns:1fr 1fr;gap:28px 32px;}
-  .skill-group h3{font-size:13px;font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--teal);text-transform:none;margin-bottom:10px;}
+  .skill-group h3{font-size:13px;font-family:'IBM Plex Mono',monospace;font-weight:500;margin-bottom:10px;}
+  .skill-group.g1 h3{color:var(--blue);}
+  .skill-group.g2 h3{color:var(--amber);}
+  .skill-group.g3 h3{color:var(--crimson);}
+  .skill-group.g4 h3{color:var(--teal);}
+  .skill-group.g5 h3{color:var(--violet);}
+  .skill-group.g6 h3{color:var(--coral);}
   .tags{display:flex;flex-wrap:wrap;gap:8px;}
   .tag{font-family:'IBM Plex Mono',monospace;font-size:12.5px;padding:5px 10px;background:var(--panel);border:1px solid var(--line);}
+  .g1 .tag{border-color:#C7D3F7;color:#1F3FAE;background:#EEF1FD;}
+  .g2 .tag{border-color:#F3DBB0;color:#9C6412;background:#FCF3E4;}
+  .g3 .tag{border-color:#F3C3CF;color:#A11F41;background:#FCEBEF;}
+  .g4 .tag{border-color:#B9E4DF;color:#0B6F65;background:#E7F7F5;}
+  .g5 .tag{border-color:#DACCFB;color:#5A32C9;background:#F3EEFE;}
+  .g6 .tag{border-color:#F7CCC4;color:#B23F2C;background:#FDEEEB;}
 
   /* CERTS */
   .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
   .cert{background:var(--panel);border:1px solid var(--line);padding:16px;}
   .cert .name{font-weight:600;font-size:14.5px;}
   .cert .status{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
-  .cert.inprep{border-left:3px solid var(--amber);}
   .cert.done{border-left:3px solid var(--teal);}
+  .cert.inprep{border-left:3px solid var(--amber);}
 
   /* PROJECTS */
   .projects{display:flex;flex-direction:column;gap:20px;}
   .project{display:grid;grid-template-columns:110px 1fr;gap:18px;}
-  .project .tag-num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-soft);padding-top:2px;}
+  .project .tag-num{font-family:'IBM Plex Mono',monospace;font-size:12px;padding-top:2px;font-weight:500;}
+  .project:nth-child(1) .tag-num{color:var(--blue);}
+  .project:nth-child(2) .tag-num{color:var(--violet);}
+  .project:nth-child(3) .tag-num{color:var(--teal);}
+  .project:nth-child(4) .tag-num{color:var(--coral);}
   .project h3{font-size:16px;margin-bottom:6px;}
   .project p{margin:0;color:var(--ink-soft);font-size:14.5px;}
 
   /* CONTACT */
-  footer{padding:52px 0 64px;}
+  footer{padding:52px 0 64px;background:linear-gradient(135deg,#161B2E 0%,#2A1F45 100%);color:#fff;}
+  footer .eyebrow{color:var(--coral)!important;}
+  footer h2{color:#fff;}
+  footer .lede{color:rgba(255,255,255,.75);}
   .contact-grid{display:flex;flex-wrap:wrap;gap:28px;margin-top:18px;}
-  .contact-item .k{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);margin-bottom:4px;}
+  .contact-item .k{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:rgba(255,255,255,.55);margin-bottom:4px;}
   .contact-item .v{font-size:15px;}
-  .fine{margin-top:40px;font-size:12px;color:var(--ink-soft);}
+  .contact-item .v a{color:#8FB2FF;}
+  .fine{margin-top:40px;font-size:12px;color:rgba(255,255,255,.45);}
 
   @media (max-width:720px){
     .hero{grid-template-columns:1fr;}
@@ -116,7 +156,7 @@
 <body>
 
 <header>
-  <div class="wrap hero">
+  <div class="hero">
     <div>
       <h1>Wawoli Justin Koné</h1>
       <div class="role">Référent Technique IT — Support Utilisateurs · Systèmes · Cloud Azure</div>
@@ -154,7 +194,7 @@
     <div class="eyebrow">parcours</div>
     <h2>Expérience professionnelle</h2>
     <div class="timeline">
-      <div class="tl-item">
+      <div class="tl-item c1">
         <div class="tl-date">juillet 2021 — aujourd'hui</div>
         <div class="tl-title">Référent Technique Support Utilisateurs</div>
         <div class="tl-org">SOLIBRA, Abidjan · CDI</div>
@@ -166,7 +206,7 @@
           <li>Collaboration avec les équipes locales et internationales pour la continuité de service</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item c2">
         <div class="tl-date">août 2018 — juin 2021</div>
         <div class="tl-title">Technicien Support Utilisateurs</div>
         <div class="tl-org">SOLIBRA, Abidjan · CDI</div>
@@ -176,7 +216,7 @@
           <li>Gestion des sauvegardes utilisateurs (EBS) et rédaction de documentation</li>
         </ul>
       </div>
-      <div class="tl-item">
+      <div class="tl-item c3">
         <div class="tl-date">juillet 2017 — juillet 2018</div>
         <div class="tl-title">Stagiaire Exploitation Informatique</div>
         <div class="tl-org">SOLIBRA, Abidjan</div>
@@ -194,7 +234,7 @@
     <div class="eyebrow">expertise</div>
     <h2>Compétences clés</h2>
     <div class="skill-groups">
-      <div class="skill-group">
+      <div class="skill-group g1">
         <h3>Administration IT</h3>
         <div class="tags">
           <span class="tag">Active Directory</span><span class="tag">Entra ID</span>
@@ -202,35 +242,35 @@
           <span class="tag">PowerShell</span><span class="tag">Cisco (switches/routeurs)</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g2">
         <h3>Gestion des incidents</h3>
         <div class="tags">
           <span class="tag">GLPI</span><span class="tag">ServiceNow</span>
           <span class="tag">ITIL v4</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g3">
         <h3>Cybersécurité</h3>
         <div class="tags">
           <span class="tag">Crowdstrike</span><span class="tag">Kaspersky</span>
           <span class="tag">C|SCU</span><span class="tag">Gestion des risques</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g4">
         <h3>Postes &amp; supervision</h3>
         <div class="tags">
           <span class="tag">Microsoft Intune</span><span class="tag">GPO</span>
           <span class="tag">PRTG</span><span class="tag">3CX</span><span class="tag">MyQ</span><span class="tag">Tanium</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g5">
         <h3>Collaboration &amp; Cloud</h3>
         <div class="tags">
           <span class="tag">Microsoft 365</span><span class="tag">Teams</span>
           <span class="tag">SharePoint</span><span class="tag">Azure</span>
         </div>
       </div>
-      <div class="skill-group">
+      <div class="skill-group g6">
         <h3>Langues</h3>
         <div class="tags">
           <span class="tag">Français — courant</span><span class="tag">Anglais — A2 (en progression)</span>

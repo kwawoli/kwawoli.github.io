@@ -12,13 +12,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a class="brand" href="#top" aria-label="Accueil">
+      <a class="brand" href="#top" aria-label="Wawoli Justin Koné — accueil">
         <span class="brand-mark">JK</span>
-        <span>Wawoli Justin <strong>Koné</strong></span>
+        <span class="brand-name">Wawoli Justin <b>Koné</b></span>
       </a>
       <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -26,317 +28,153 @@
       <div class="nav-links">
         <a href="#profil">Profil</a>
         <a href="#experience">Parcours</a>
-        <a href="#competences">Compétences</a>
+        <a href="#competences">Expertise</a>
         <a href="#certifications">Certifications</a>
         <a href="#projets">Réalisations</a>
-        <a class="nav-cta" href="#contact">Me contacter</a>
+        <a class="nav-cta" href="#contact">Me contacter <span>↗</span></a>
       </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero container">
+    <section class="hero container" id="accueil">
       <div class="hero-copy reveal">
-        <div class="eyebrow"><span class="pulse"></span> Disponible pour de nouvelles opportunités</div>
-        <h1>Référent Technique IT<br><span>Support · Systèmes · Microsoft 365</span></h1>
-        <p class="hero-lead">
-          Plus de 9 ans d'expérience dans le support et les infrastructures IT en environnement industriel.
-          J'accompagne les utilisateurs, les équipes techniques et les projets d'évolution du SI,
-          avec une spécialisation croissante sur Microsoft 365, Intune et Azure.
-        </p>
+        <div class="status-pill"><span class="status-dot"></span> Ouvert aux opportunités IT</div>
+        <p class="hero-kicker">RÉFÉRENT TECHNIQUE IT · SUPPORT & SYSTÈMES</p>
+        <h1>Je transforme les<br><span>problèmes IT</span> en<br>solutions fiables.</h1>
+        <p class="hero-lead">Plus de 9 ans d'expérience en environnement industriel, au service des utilisateurs, des systèmes et de la continuité opérationnelle.</p>
+        <div class="hero-tags">
+          <span>Microsoft 365</span><span>Intune</span><span>Active Directory</span><span>Azure en évolution</span>
+        </div>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projets">Voir mes réalisations <span>↗</span></a>
-          <a class="btn btn-ghost" href="#contact">Échanger avec moi</a>
+          <a class="btn btn-primary" href="#projets">Découvrir mon parcours <span>↓</span></a>
+          <a class="btn btn-ghost" href="#contact">Échanger avec moi <span>↗</span></a>
         </div>
         <div class="hero-meta">
-          <span>📍 Abidjan, Côte d'Ivoire</span>
-          <span>▣ SOLIBRA · Groupe Castel</span>
+          <span><i>●</i> Abidjan, Côte d'Ivoire</span>
+          <span><i>◆</i> SOLIBRA · Groupe Castel</span>
         </div>
       </div>
 
-      <div class="hero-panel reveal">
-        <div class="panel-glow"></div>
-        <div class="terminal">
-          <div class="terminal-top"><span></span><span></span><span></span><small>it-profile.exe</small></div>
-          <div class="terminal-body">
-            <p><i>$</i> whoami</p>
-            <h2>Justin_Kone</h2>
-            <p><i>$</i> focus --current</p>
-            <div class="chips">
-              <span>Active Directory</span>
-              <span>Microsoft 365</span>
-              <span>Intune</span>
-              <span>ITSM / ITIL</span>
-              <span>Windows Server</span>
-              <span>Azure ↗</span>
-            </div>
-            <p><i>$</i> status</p>
-            <div class="status"><b></b> En évolution · Cloud Microsoft</div>
+      <div class="hero-visual reveal">
+        <div class="photo-orbit orbit-a"></div>
+        <div class="photo-orbit orbit-b"></div>
+        <div class="photo-shell">
+          <div class="photo-topline"><span>PROFILE / 2026</span><span>IT · M365 · SYSTEMS</span></div>
+          <div class="photo-frame">
+            <img src="assets/justin-kone-photo.webp" alt="Portrait professionnel de Wawoli Justin Koné" loading="eager" decoding="async">
+            <div class="photo-gradient"></div>
+            <div class="photo-name"><strong>Justin Koné</strong><span>Référent Technique IT</span></div>
+            <div class="photo-badge"><span>✓</span> 9+ ans d'expérience</div>
+          </div>
+          <div class="photo-bottomline">
+            <span>SUPPORT</span><span>SYSTÈMES</span><span>ENDPOINT</span><span>CLOUD</span>
           </div>
         </div>
+        <div class="floating-card fc-one"><small>FOCUS</small><strong>Microsoft 365</strong><span>Intune · AD · ITSM</span></div>
+        <div class="floating-card fc-two"><small>ÉVOLUTION</small><strong>Azure ↗</strong><span>Montée en compétence</span></div>
       </div>
     </section>
 
-    <section class="metrics container reveal">
-      <div><strong>9+</strong><span>années d'expérience IT</span></div>
-      <div><strong>1 000+</strong><span>utilisateurs accompagnés</span></div>
-      <div><strong>N1 / N2</strong><span>support & résolution d'incidents</span></div>
-      <div><strong>3</strong><span>certifications obtenues</span></div>
+    <section class="metrics container reveal" aria-label="Chiffres clés">
+      <div><strong>9<span>+</span></strong><small>années en IT</small></div>
+      <div><strong>1K<span>+</span></strong><small>utilisateurs accompagnés</small></div>
+      <div><strong>N1<span>/</span>N2</strong><small>support & incidents</small></div>
+      <div><strong>3</strong><small>certifications obtenues</small></div>
     </section>
 
     <section class="section container" id="profil">
-      <div class="section-heading reveal">
-        <span class="section-kicker">01 · PROFIL</span>
-        <h2>Un profil terrain, orienté <em>service & fiabilité.</em></h2>
+      <div class="section-intro reveal">
+        <span class="section-index">01</span>
+        <div><p class="section-kicker">PROFIL</p><h2>Un profil <em>terrain.</em><br>Une vision orientée service.</h2></div>
       </div>
       <div class="profile-grid">
-        <div class="profile-text reveal">
-          <p>
-            Référent Technique Support Utilisateurs chez SOLIBRA, j'interviens au croisement du
-            <strong>support utilisateurs, des systèmes, des postes de travail et de l'ITSM</strong>.
-            Mon expérience s'est construite dans un environnement industriel exigeant, où la continuité
-            de service et la qualité du support sont essentielles.
-          </p>
-          <p>
-            Mon objectif professionnel est d'élargir progressivement mon périmètre vers
-            <strong>l'administration Microsoft 365 et Azure</strong>, tout en capitalisant sur mon expérience
-            opérationnelle des environnements Windows, Active Directory, Intune et des processus ITIL.
-          </p>
-          <div class="principles">
-            <span>● Sens du service</span>
-            <span>● Méthode & documentation</span>
-            <span>● Coordination technique</span>
-            <span>● Amélioration continue</span>
-          </div>
+        <div class="profile-main reveal">
+          <p class="lead-copy">Référent Technique Support Utilisateurs chez SOLIBRA, j'interviens au croisement du <strong>support utilisateurs, des systèmes, des postes de travail et de l'ITSM</strong>.</p>
+          <p>Mon parcours s'est construit dans un environnement industriel exigeant. J'y accompagne les utilisateurs, les équipes techniques et les évolutions du SI avec une approche pragmatique : diagnostiquer, documenter, résoudre et améliorer.</p>
+          <p>Je développe aujourd'hui mon périmètre vers <strong>Microsoft 365 et Azure</strong>, en capitalisant sur mon expérience Windows, Active Directory, Intune et ITIL.</p>
+          <div class="principles"><span>01 · Sens du service</span><span>02 · Méthode</span><span>03 · Coordination</span><span>04 · Amélioration continue</span></div>
         </div>
         <aside class="profile-card reveal">
-          <div class="card-label">POSITIONNEMENT</div>
+          <div class="card-top"><span>POSITIONNEMENT</span><b>IT / 2026</b></div>
+          <div class="profile-initials">JK</div>
           <h3>Référent Technique IT</h3>
-          <p>Support utilisateurs · Systèmes · Endpoint Management · Microsoft 365 · Azure en évolution</p>
-          <div class="mini-line"></div>
-          <div class="facts">
-            <span><b>Depuis</b> 2017</span>
-            <span><b>Environnement</b> Industriel</span>
-            <span><b>Langues</b> FR courant · EN A2</span>
+          <p>Support · Systèmes · Endpoint Management · Microsoft 365 · Azure en évolution</p>
+          <div class="fact-list">
+            <div><span>Expérience</span><strong>Depuis 2017</strong></div>
+            <div><span>Environnement</span><strong>Industriel</strong></div>
+            <div><span>Certifications</span><strong>AZ-900 · ITIL v4 · C|SCU</strong></div>
+            <div><span>Langues</span><strong>Français · Anglais A2</strong></div>
           </div>
         </aside>
       </div>
     </section>
 
-    <section class="section section-dark" id="experience">
+    <section class="section dark-section" id="experience">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-kicker">02 · PARCOURS</span>
-          <h2>Une progression construite sur le <em>terrain.</em></h2>
+        <div class="section-intro reveal">
+          <span class="section-index">02</span>
+          <div><p class="section-kicker">PARCOURS</p><h2>Une progression construite<br>sur le <em>terrain.</em></h2></div>
         </div>
         <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Juil. 2021 — Aujourd'hui</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="role-tag">CADRE · RÉFÉRENT TECHNIQUE</span>
-              <h3>Référent Technique Support Utilisateurs</h3>
-              <p class="company">SOLIBRA · Groupe Castel · Abidjan</p>
-              <ul>
-                <li>Support utilisateurs et gestion des incidents N1/N2 via GLPI et ServiceNow.</li>
-                <li>Administration des comptes et objets Active Directory, groupes, GPO et cycle de vie utilisateurs.</li>
-                <li>Gestion des endpoints avec Microsoft Intune et accompagnement des évolutions du poste de travail.</li>
-                <li>Support Microsoft 365 et accompagnement des utilisateurs sur les outils collaboratifs.</li>
-                <li>Appui technique, coordination et accompagnement des techniciens de support.</li>
-                <li>Collaboration avec les équipes locales et internationales pour la continuité de service.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Août 2018 — Juil. 2021</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="role-tag">SUPPORT UTILISATEURS</span>
-              <h3>Technicien Assistance Utilisateur</h3>
-              <p class="company">SOLIBRA · Groupe Castel · Abidjan</p>
-              <ul>
-                <li>Prise en charge des incidents et demandes utilisateurs dans un environnement industriel.</li>
-                <li>Support Windows, Microsoft 365, postes de travail et outils métier.</li>
-                <li>Gestion des comptes, documentation technique et assistance de proximité.</li>
-                <li>Participation à la supervision et au maintien en condition opérationnelle des services IT.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item reveal">
-            <div class="timeline-date">Juil. 2017 — Août 2018</div>
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="role-tag">EXPLOITATION INFORMATIQUE</span>
-              <h3>Stagiaire Exploitation Informatique</h3>
-              <p class="company">SOLIBRA · Groupe Castel · Abidjan</p>
-              <ul>
-                <li>Découverte opérationnelle de l'administration systèmes et de l'exploitation IT.</li>
-                <li>Support aux utilisateurs et gestion des comptes dans l'environnement Windows/AD.</li>
-                <li>Participation à la supervision d'infrastructures et à la documentation technique.</li>
-              </ul>
-            </div>
-          </article>
+          <article class="timeline-item reveal"><div class="timeline-date">2021 — Aujourd'hui</div><div class="timeline-marker"><span></span></div><div class="timeline-content"><div class="role-line"><span>CADRE · RÉFÉRENT TECHNIQUE</span><b>01</b></div><h3>Référent Technique Support Utilisateurs</h3><p class="company">SOLIBRA · Groupe Castel · Abidjan</p><ul><li>Support utilisateurs et gestion des incidents N1/N2 via GLPI et ServiceNow.</li><li>Administration des comptes et objets Active Directory, groupes, GPO et cycle de vie utilisateurs.</li><li>Gestion des endpoints avec Microsoft Intune et accompagnement des évolutions du poste de travail.</li><li>Support Microsoft 365, appui technique et coordination des techniciens.</li><li>Collaboration avec les équipes locales et internationales pour la continuité de service.</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">2018 — 2021</div><div class="timeline-marker"><span></span></div><div class="timeline-content"><div class="role-line"><span>SUPPORT UTILISATEURS</span><b>02</b></div><h3>Technicien Assistance Utilisateur</h3><p class="company">SOLIBRA · Groupe Castel · Abidjan</p><ul><li>Prise en charge des incidents et demandes utilisateurs en environnement industriel.</li><li>Support Windows, Microsoft 365, postes de travail et outils métier.</li><li>Gestion des comptes, documentation technique et assistance de proximité.</li><li>Participation à la supervision et au maintien en condition opérationnelle.</li></ul></div></article>
+          <article class="timeline-item reveal"><div class="timeline-date">2017 — 2018</div><div class="timeline-marker"><span></span></div><div class="timeline-content"><div class="role-line"><span>EXPLOITATION INFORMATIQUE</span><b>03</b></div><h3>Stagiaire Exploitation Informatique</h3><p class="company">SOLIBRA · Groupe Castel · Abidjan</p><ul><li>Découverte opérationnelle de l'administration systèmes et de l'exploitation IT.</li><li>Support utilisateurs et gestion des comptes dans l'environnement Windows/AD.</li><li>Participation à la supervision d'infrastructures et à la documentation technique.</li></ul></div></article>
         </div>
       </div>
     </section>
 
     <section class="section container" id="competences">
-      <div class="section-heading reveal">
-        <span class="section-kicker">03 · COMPÉTENCES</span>
-        <h2>Une stack orientée <em>opérations IT.</em></h2>
-      </div>
+      <div class="section-intro reveal"><span class="section-index">03</span><div><p class="section-kicker">EXPERTISE</p><h2>Une stack orientée<br><em>opérations IT.</em></h2></div></div>
       <div class="skills-grid">
-        <article class="skill-card reveal">
-          <span class="skill-number">01</span>
-          <h3>Support & ITSM</h3>
-          <p>Gestion des incidents, demandes, escalades et amélioration continue du service.</p>
-          <div class="skill-tags"><span>GLPI</span><span>ServiceNow</span><span>ITIL v4</span><span>N1/N2</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">02</span>
-          <h3>Identité & Systèmes</h3>
-          <p>Administration des environnements Windows et gestion du cycle de vie des identités.</p>
-          <div class="skill-tags"><span>Active Directory</span><span>GPO</span><span>Windows Server</span><span>Entra ID</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">03</span>
-          <h3>Microsoft 365 & Endpoint</h3>
-          <p>Support des services Microsoft 365 et gestion centralisée des postes utilisateurs.</p>
-          <div class="skill-tags"><span>Microsoft 365</span><span>Intune</span><span>Teams</span><span>SharePoint</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">04</span>
-          <h3>Infrastructure</h3>
-          <p>Supervision et exploitation d'environnements virtualisés et de services IT.</p>
-          <div class="skill-tags"><span>VMware</span><span>Hyper-V</span><span>PRTG</span><span>Veeam</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">05</span>
-          <h3>Outils & Sécurité</h3>
-          <p>Utilisation d'outils de gestion des endpoints, de supervision et de sécurité opérationnelle.</p>
-          <div class="skill-tags"><span>Tanium</span><span>CrowdStrike</span><span>Kaspersky</span><span>PowerShell</span></div>
-        </article>
-        <article class="skill-card reveal">
-          <span class="skill-number">06</span>
-          <h3>Cloud Microsoft</h3>
-          <p>Montée en compétence progressive vers l'administration Microsoft 365 et Azure.</p>
-          <div class="skill-tags"><span>AZ-900</span><span>Azure</span><span>MS-102</span><span>AZ-104</span></div>
-        </article>
+        <article class="skill-card reveal"><span class="skill-no">01</span><div class="skill-icon">⌁</div><h3>Support & ITSM</h3><p>Gestion des incidents, demandes, escalades et amélioration continue du service.</p><div class="skill-tags"><span>GLPI</span><span>ServiceNow</span><span>ITIL v4</span><span>N1/N2</span></div></article>
+        <article class="skill-card reveal"><span class="skill-no">02</span><div class="skill-icon">◎</div><h3>Identité & Systèmes</h3><p>Administration des environnements Windows et gestion du cycle de vie des identités.</p><div class="skill-tags"><span>Active Directory</span><span>GPO</span><span>Windows Server</span><span>Entra ID</span></div></article>
+        <article class="skill-card reveal"><span class="skill-no">03</span><div class="skill-icon">▣</div><h3>Microsoft 365 & Endpoint</h3><p>Support des services Microsoft 365 et gestion centralisée des postes utilisateurs.</p><div class="skill-tags"><span>Microsoft 365</span><span>Intune</span><span>Teams</span><span>SharePoint</span></div></article>
+        <article class="skill-card reveal"><span class="skill-no">04</span><div class="skill-icon">◈</div><h3>Infrastructure</h3><p>Supervision et exploitation d'environnements virtualisés et de services IT.</p><div class="skill-tags"><span>VMware</span><span>Hyper-V</span><span>PRTG</span><span>Veeam</span></div></article>
+        <article class="skill-card reveal"><span class="skill-no">05</span><div class="skill-icon">◇</div><h3>Outils & Sécurité</h3><p>Utilisation d'outils de gestion des endpoints, de supervision et de sécurité opérationnelle.</p><div class="skill-tags"><span>Tanium</span><span>CrowdStrike</span><span>Kaspersky</span><span>PowerShell</span></div></article>
+        <article class="skill-card featured-skill reveal"><span class="skill-no">06</span><div class="skill-icon">↗</div><h3>Cloud Microsoft</h3><p>Montée en compétence progressive vers l'administration Microsoft 365 et Azure.</p><div class="skill-tags"><span>AZ-900</span><span>Azure</span><span>MS-102</span><span>AZ-104</span></div><div class="skill-progress"><span></span></div><small>En progression continue</small></article>
       </div>
     </section>
 
-    <section class="section section-dark" id="certifications">
+    <section class="section dark-section" id="certifications">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="section-kicker">04 · VALIDATION</span>
-          <h2>Certifications & <em>progression.</em></h2>
-        </div>
+        <div class="section-intro reveal"><span class="section-index">04</span><div><p class="section-kicker">VALIDATION</p><h2>Certifications &<br><em>progression.</em></h2></div></div>
         <div class="cert-grid">
-          <article class="cert-card obtained reveal">
-            <div class="cert-icon">✓</div><span>OBTENUE</span>
-            <h3>Microsoft Azure Fundamentals</h3><strong>AZ-900</strong>
-            <p>Fondamentaux du cloud, services Azure, sécurité, gouvernance et tarification.</p>
-          </article>
-          <article class="cert-card obtained reveal">
-            <div class="cert-icon">✓</div><span>OBTENUE</span>
-            <h3>ITIL Foundation</h3><strong>ITIL v4</strong>
-            <p>Principes de gestion des services IT et amélioration continue.</p>
-          </article>
-          <article class="cert-card obtained reveal">
-            <div class="cert-icon">✓</div><span>OBTENUE</span>
-            <h3>Certified Secure Computer User</h3><strong>C|SCU v2</strong>
-            <p>Bonnes pratiques de sécurité informatique pour les utilisateurs.</p>
-          </article>
-          <article class="cert-card progress reveal">
-            <div class="cert-icon">↗</div><span>EN PRÉPARATION</span>
-            <h3>Azure Administrator</h3><strong>AZ-104</strong>
-            <p>Administration des ressources et services Microsoft Azure.</p>
-          </article>
-          <article class="cert-card progress reveal">
-            <div class="cert-icon">↗</div><span>EN PRÉPARATION</span>
-            <h3>Microsoft 365 Administrator</h3><strong>MS-102</strong>
-            <p>Administration du tenant, identité, sécurité et conformité Microsoft 365.</p>
-          </article>
-          <article class="cert-card progress reveal">
-            <div class="cert-icon">↗</div><span>PROGRESSION</span>
-            <h3>Gestion de projet IT</h3><strong>PMP</strong>
-            <p>Développement des compétences en pilotage et management de projets.</p>
-          </article>
+          <article class="cert-card obtained reveal"><div class="cert-status"><span>✓</span> OBTENUE</div><strong>AZ-900</strong><h3>Microsoft Azure Fundamentals</h3><p>Fondamentaux du cloud, services Azure, sécurité, gouvernance et tarification.</p></article>
+          <article class="cert-card obtained reveal"><div class="cert-status"><span>✓</span> OBTENUE</div><strong>ITIL v4</strong><h3>ITIL Foundation</h3><p>Principes de gestion des services IT et amélioration continue.</p></article>
+          <article class="cert-card obtained reveal"><div class="cert-status"><span>✓</span> OBTENUE</div><strong>C|SCU v2</strong><h3>Certified Secure Computer User</h3><p>Bonnes pratiques de sécurité informatique pour les utilisateurs.</p></article>
+          <article class="cert-card progress reveal"><div class="cert-status"><span>↗</span> EN PRÉPARATION</div><strong>AZ-104</strong><h3>Azure Administrator</h3><p>Administration des ressources et services Microsoft Azure.</p></article>
+          <article class="cert-card progress reveal"><div class="cert-status"><span>↗</span> EN PRÉPARATION</div><strong>MS-102</strong><h3>Microsoft 365 Administrator</h3><p>Administration du tenant, identité, sécurité et conformité Microsoft 365.</p></article>
+          <article class="cert-card progress reveal"><div class="cert-status"><span>↗</span> PROGRESSION</div><strong>PMP</strong><h3>Gestion de projet IT</h3><p>Développement des compétences en pilotage et management de projets.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section container" id="projets">
-      <div class="section-heading reveal">
-        <span class="section-kicker">05 · RÉALISATIONS</span>
-        <h2>Des sujets IT avec un <em>impact opérationnel.</em></h2>
-      </div>
+      <div class="section-intro reveal"><span class="section-index">05</span><div><p class="section-kicker">RÉALISATIONS</p><h2>Des sujets IT avec un<br><em>impact opérationnel.</em></h2></div></div>
       <div class="projects-grid">
-        <article class="project-card project-featured reveal">
-          <div class="project-top"><span>01</span><span>MICROSOFT 365</span></div>
-          <h3>Évolution vers SharePoint</h3>
-          <p>Participation au suivi de la migration des partages réseau vers SharePoint, en coordination avec les équipes locales et internationales.</p>
-          <div class="project-result">Collaboration · Gouvernance documentaire · Cloud</div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top"><span>02</span><span>ENDPOINT</span></div>
-          <h3>Gestion des postes avec Intune</h3>
-          <p>Administration et suivi des endpoints utilisateurs avec une approche centralisée de la gestion du poste de travail.</p>
-          <div class="project-result">Intune · Windows · Standardisation</div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top"><span>03</span><span>ACTIVE DIRECTORY</span></div>
-          <h3>Reporting & hygiène AD</h3>
-          <p>Production de rapports sur les utilisateurs et ordinateurs AD : comptes inactifs, nouveaux comptes, désactivation et qualité des données.</p>
-          <div class="project-result">PowerShell · Excel · Power BI</div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top"><span>04</span><span>POSTE DE TRAVAIL</span></div>
-          <h3>Suivi de migration Windows 11</h3>
-          <p>Suivi de l'état du parc Windows et identification des postes compatibles ou nécessitant des actions spécifiques.</p>
-          <div class="project-result">Windows 11 · Inventaire · Pilotage</div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top"><span>05</span><span>ITSM</span></div>
-          <h3>Amélioration du support</h3>
-          <p>Accompagnement des techniciens, documentation et structuration des pratiques pour améliorer la prise en charge des utilisateurs.</p>
-          <div class="project-result">ITIL · Documentation · Coordination</div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-top"><span>06</span><span>SUPERVISION</span></div>
-          <h3>Suivi de l'infrastructure</h3>
-          <p>Utilisation d'outils de supervision et d'administration pour contribuer au maintien en condition opérationnelle des services IT.</p>
-          <div class="project-result">PRTG · VMware · Veeam</div>
-        </article>
+        <article class="project-card project-featured reveal"><div class="project-top"><span>01 / MICROSOFT 365</span><b>↗</b></div><h3>Évolution vers SharePoint</h3><p>Participation au suivi de la migration des partages réseau vers SharePoint, en coordination avec les équipes locales et internationales.</p><div class="project-result">Collaboration · Gouvernance documentaire · Cloud</div></article>
+        <article class="project-card reveal"><div class="project-top"><span>02 / ENDPOINT</span><b>↗</b></div><h3>Gestion des postes avec Intune</h3><p>Administration et suivi des endpoints utilisateurs avec une approche centralisée de la gestion du poste de travail.</p><div class="project-result">Intune · Windows · Standardisation</div></article>
+        <article class="project-card reveal"><div class="project-top"><span>03 / ACTIVE DIRECTORY</span><b>↗</b></div><h3>Reporting & hygiène AD</h3><p>Production de rapports sur les utilisateurs et ordinateurs AD : comptes inactifs, nouveaux comptes, désactivation et qualité des données.</p><div class="project-result">PowerShell · Excel · Power BI</div></article>
+        <article class="project-card reveal"><div class="project-top"><span>04 / POSTE DE TRAVAIL</span><b>↗</b></div><h3>Suivi de migration Windows 11</h3><p>Suivi de l'état du parc Windows et identification des postes compatibles ou nécessitant des actions spécifiques.</p><div class="project-result">Windows 11 · Inventaire · Pilotage</div></article>
+        <article class="project-card reveal"><div class="project-top"><span>05 / ITSM</span><b>↗</b></div><h3>Amélioration du support</h3><p>Accompagnement des techniciens, documentation et structuration des pratiques pour améliorer la prise en charge des utilisateurs.</p><div class="project-result">ITIL · Documentation · Coordination</div></article>
+        <article class="project-card reveal"><div class="project-top"><span>06 / SUPERVISION</span><b>↗</b></div><h3>Suivi de l'infrastructure</h3><p>Utilisation d'outils de supervision et d'administration pour contribuer au maintien en condition opérationnelle des services IT.</p><div class="project-result">PRTG · VMware · Veeam</div></article>
       </div>
     </section>
 
-    <section class="section contact-section" id="contact">
+    <section class="contact-section" id="contact">
       <div class="container contact-wrap reveal">
-        <div>
-          <span class="section-kicker">06 · CONTACT</span>
-          <h2>Un projet, un besoin IT ou une opportunité ?</h2>
-          <p>Je suis ouvert aux échanges autour du support IT, des systèmes, de Microsoft 365 et de ma progression vers l'administration Cloud.</p>
-        </div>
+        <div class="contact-copy"><span class="section-kicker">06 · CONTACT</span><p class="contact-label">LET'S CONNECT</p><h2>Parlons de votre<br><em>prochain défi IT.</em></h2><p>Support IT, systèmes, Microsoft 365, endpoint management ou évolution vers le Cloud : je suis ouvert aux échanges professionnels et aux nouvelles opportunités.</p></div>
         <div class="contact-actions">
-          <a class="contact-link" href="mailto:kwawolijustin@yahoo.fr"><small>EMAIL</small><span>kwawolijustin@yahoo.fr ↗</span></a>
-          <a class="contact-link" href="tel:+2250747509552"><small>TÉLÉPHONE</small><span>+225 07 47 50 95 52 ↗</span></a>
-          <a class="contact-link" href="https://www.linkedin.com/in/wjustin-kone/" target="_blank" rel="noopener"><small>LINKEDIN</small><span>/in/wjustin-kone ↗</span></a>
+          <a class="contact-link" href="mailto:kwawolijustin@yahoo.fr"><span class="contact-icon">@</span><div><small>EMAIL</small><strong>kwawolijustin@yahoo.fr</strong></div><b>↗</b></a>
+          <a class="contact-link" href="tel:+2250747509552"><span class="contact-icon">☎</span><div><small>TÉLÉPHONE</small><strong>+225 07 47 50 95 52</strong></div><b>↗</b></a>
+          <a class="contact-link" href="https://www.linkedin.com/in/wjustin-kone/" target="_blank" rel="noopener"><span class="contact-icon">in</span><div><small>LINKEDIN</small><strong>/in/wjustin-kone</strong></div><b>↗</b></a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Wawoli Justin Koné</span>
-      <span>Référent Technique IT · Support & Systèmes</span>
-      <a href="#top">Retour en haut ↑</a>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="year"></span> Wawoli Justin Koné</span><span>Référent Technique IT · Support & Systèmes</span><a href="#top">Retour en haut ↑</a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>
